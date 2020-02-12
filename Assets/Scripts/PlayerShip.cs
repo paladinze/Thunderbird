@@ -8,14 +8,15 @@ public class PlayerShip : MonoBehaviour
 
     [SerializeField] float moveSpeed = 5.0f;
     [SerializeField] float bulletSpeed = 10f;
-    [SerializeField] GameObject machineGunPrefab;
+    [SerializeField] GameObject mainWeaponPrefab;
     float minX;
     float maxX;
     float minY;
     float maxY;
     private float boundaryPadding;
+    private float bulletFiringSecondsPerClick = 0.05f;
+    private Coroutine fireCoroutine;
 
-    // Start is called before the first frame update
     void Start() {
         setMoveBoundaries();
     }
@@ -24,18 +25,22 @@ public class PlayerShip : MonoBehaviour
     void Update()
     {
         Move();
-        Fire();
+        if (Input.GetButtonDown("Fire1") && fireCoroutine == null) {
+            fireCoroutine = StartCoroutine(RepeatFire());
+        }
+        if (Input.GetButtonUp("Fire1") && fireCoroutine != null) {
+            StopCoroutine(fireCoroutine);
+            fireCoroutine = null;
+        }
     }
 
-    private void Fire()
+    private void FireSingleBullet()
     {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            GameObject bullet = Instantiate(
-                machineGunPrefab, transform.position, Quaternion.identity);
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0, bulletSpeed);
-
-        }
+        float shipTipYPos = GetComponent<Renderer>().bounds.max.y;
+        Vector2 bulletPos = new Vector2(transform.position.x, shipTipYPos);
+        GameObject bullet = Instantiate(
+            mainWeaponPrefab, bulletPos, Quaternion.identity);
+        bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0, bulletSpeed);
     }
 
     private void setMoveBoundaries() {
@@ -53,5 +58,12 @@ public class PlayerShip : MonoBehaviour
         float newXPos = Mathf.Clamp(transform.position.x + deltaX, minX, maxX);
         float newYPos = Mathf.Clamp(transform.position.y + deltaY, minY, maxY);
         transform.position = new Vector2(newXPos, newYPos);
+    }
+
+    private IEnumerator RepeatFire() {
+        while (true) {
+            FireSingleBullet();
+            yield return new WaitForSeconds(bulletFiringSecondsPerClick);
+        }
     }
 }

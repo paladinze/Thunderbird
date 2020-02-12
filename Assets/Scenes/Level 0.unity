@@ -263,18 +263,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4218195630672084147, guid: 908218b325f0345ee8b4a36e60bfff2f,
-        type: 3}
-      propertyPath: weapon
-      value: 
-      objectReference: {fileID: 8620019425337953522, guid: 1e0145498111c4776a99e4ca93e9d024,
-        type: 3}
-    - target: {fileID: 4218195630672084147, guid: 908218b325f0345ee8b4a36e60bfff2f,
-        type: 3}
-      propertyPath: machineGunPrefab
-      value: 
-      objectReference: {fileID: 8620019425337953522, guid: 1e0145498111c4776a99e4ca93e9d024,
-        type: 3}
     - target: {fileID: 4218195630672084301, guid: 908218b325f0345ee8b4a36e60bfff2f,
         type: 3}
       propertyPath: m_LocalPosition.x

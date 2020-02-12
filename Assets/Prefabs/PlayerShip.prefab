@@ -46,10 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  minX: 0
-  maxX: 0
-  minY: 0
-  maxY: 0
+  bulletSpeed: 10
+  mainWeaponPrefab: {fileID: 0}
 --- !u!212 &4218195630672084300
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -113,7 +111,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  minX: 0
-  maxX: 0
-  minY: 0
-  maxY: 0
+  bulletSpeed: 10
+  mainWeaponPrefab: {fileID: 8620019425337953522, guid: 1e0145498111c4776a99e4ca93e9d024,
+    type: 3}
