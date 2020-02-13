@@ -8,13 +8,13 @@ public class PlayerShip : MonoBehaviour
 
     [SerializeField] float moveSpeed = 5.0f;
     [SerializeField] float bulletSpeed = 10f;
+    float bulletFiringStopPeriod = 0.1f;
     [SerializeField] GameObject mainWeaponPrefab;
     float minX;
     float maxX;
     float minY;
     float maxY;
     private float boundaryPadding;
-    private float bulletFiringSecondsPerClick = 0.05f;
     private Coroutine fireCoroutine;
 
     void Start() {
@@ -63,7 +63,7 @@ public class PlayerShip : MonoBehaviour
     private IEnumerator RepeatFire() {
         while (true) {
             FireSingleBullet();
-            yield return new WaitForSeconds(bulletFiringSecondsPerClick);
+            yield return new WaitForSeconds(bulletFiringStopPeriod);
         }
     }
 }

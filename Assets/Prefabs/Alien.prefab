@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 764697187289962165}
   - component: {fileID: 764697187289962162}
+  - component: {fileID: 4857240720085810305}
   m_Layer: 0
   m_Name: Alien
   m_TagString: Untagged
@@ -81,3 +82,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4857240720085810305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764697187289962163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ec1199f17fbc4b98b8ca3a67eda4acd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveConfig: {fileID: 11400000, guid: ec26d2bb83d094c6782b0d5a00369770, type: 2}
+  moveSpeed: 3
