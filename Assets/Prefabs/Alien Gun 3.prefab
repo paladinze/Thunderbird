@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 3158652297199445893}
   - component: {fileID: 2336562251853562343}
   - component: {fileID: -5026302306648771530}
-  m_Layer: 10
-  m_Name: Machine Gun
+  m_Layer: 11
+  m_Name: Alien Gun 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 78f02d1cbc537d4488578b7b68f34f68, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8207547, g: 0.53105706, b: 0.4452207, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
