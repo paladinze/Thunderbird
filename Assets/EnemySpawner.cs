@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] List<WaveConfig> WaveConfigs;
-    int startingWaveIndex = 0;
-
+    [SerializeField] List<WaveConfig> waveConfigs;
+    [SerializeField] int startingWaveIndex = 0;
+    [SerializeField] bool shouldLoopWaves = false;
 
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
-        WaveConfig currWave = WaveConfigs[startingWaveIndex];
-        StartCoroutine(SpawnWave(currWave));
-        
+        do {
+            yield return StartCoroutine(SpawnAllWaves());
+        } while (shouldLoopWaves);
     }
 
     // Update is called once per frame
@@ -26,6 +26,13 @@ public class EnemySpawner : MonoBehaviour
         var spawnPos = waveConfig.GetWayPoints()[0].transform.position;
         var alien = Instantiate(alienPrefab, spawnPos, Quaternion.identity);
         alien.GetComponent<EnemyPath>().SetWaveConfig(waveConfig);
+    }
+
+    private IEnumerator SpawnAllWaves() {
+        for (int i=startingWaveIndex; i<waveConfigs.Count; i++) {
+            var currWaveConfig = waveConfigs[i];
+            yield return StartCoroutine(SpawnWave(currWaveConfig));
+        }
     }
 
     private IEnumerator SpawnWave(WaveConfig wave) {
