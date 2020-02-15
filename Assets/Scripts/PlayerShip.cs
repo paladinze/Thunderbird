@@ -12,6 +12,10 @@ public class PlayerShip : MonoBehaviour
     [Header("Weapon")]
     [SerializeField] float bulletSpeed = 10f;
     [SerializeField] GameObject mainWeaponPrefab;
+
+    [Header("Destruction")]
+    [SerializeField] GameObject destructionVfx;
+
     float bulletFiringStopPeriod = 0.1f;
     float minX;
     float maxX;
@@ -81,6 +85,7 @@ public class PlayerShip : MonoBehaviour
         damageDealer.Hit();
         if (health < 0) {
             Destroy(gameObject);
+            Instantiate(destructionVfx, gameObject.transform.position, Quaternion.identity);
         }
     } 
 }

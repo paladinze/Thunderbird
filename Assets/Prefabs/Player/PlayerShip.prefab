@@ -100,6 +100,8 @@ MonoBehaviour:
   bulletSpeed: 10
   mainWeaponPrefab: {fileID: 8620019425337953522, guid: 1e0145498111c4776a99e4ca93e9d024,
     type: 3}
+  destructionVfx: {fileID: 3325203098098812030, guid: 3479d6c4d49154ad7a8b5e304a4a4f09,
+    type: 3}
 --- !u!60 &-4235424439201096016
 PolygonCollider2D:
   m_ObjectHideFlags: 0

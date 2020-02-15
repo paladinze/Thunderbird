@@ -110,6 +110,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponPrefab: {fileID: 8620019425337953522, guid: c19f6ba0efffa481eaa2889fca0c5f10,
     type: 3}
+  destructionVfx: {fileID: 1280240331523082, guid: 45ae5851ef2832044bba82850372d67b,
+    type: 3}
   health: 100
   minTimeTillNextFire: 1
   maxTimeTillNextFire: 3

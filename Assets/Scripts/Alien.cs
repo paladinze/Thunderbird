@@ -6,6 +6,7 @@ using UnityEngine;
 public class Alien : MonoBehaviour
 {
     [SerializeField] GameObject weaponPrefab;
+    [SerializeField] GameObject destructionVfx;
     [SerializeField] float health = 100; 
     [SerializeField] float minTimeTillNextFire = 1.0f;
     [SerializeField] float maxTimeTillNextFire = 3.0f;
@@ -55,6 +56,7 @@ public class Alien : MonoBehaviour
     damageDealer.Hit();
     if (health <= 0)
     {
+      var vfx = Instantiate(destructionVfx, gameObject.transform.position, Quaternion.identity);
       Destroy(gameObject);
     }
   }

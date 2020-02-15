@@ -17,7 +17,6 @@ public class BulletShredder : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log("triggered!");
         Destroy(collision.gameObject);
     }
 }

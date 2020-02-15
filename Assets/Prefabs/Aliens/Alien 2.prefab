@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2093480431201959158}
   - component: {fileID: 6878303692863561128}
   - component: {fileID: 3350309795313864020}
-  - component: {fileID: 1227093857775358294}
-  - component: {fileID: -51842433164497597}
+  - component: {fileID: -3756546010877900029}
+  - component: {fileID: -725227098599012058}
   m_Layer: 9
-  m_Name: Alien 3
+  m_Name: Alien 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 572bbbf3cf1734a23ba9c9200c9cb01e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 34cc9b57589d84e5b8e922a33f9caeed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,24 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec1199f17fbc4b98b8ca3a67eda4acd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1227093857775358294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 356825648026846390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c5976d2804c94bf9a7e27d761e76b83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 8620019425337953522, guid: d3cc98bcd64634d548df76f5a77deec1,
-    type: 3}
-  health: 300
-  minTimeTillNextFire: 0.3
-  maxTimeTillNextFire: 1
---- !u!60 &-51842433164497597
+--- !u!60 &-3756546010877900029
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,7 +113,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.26, y: 1.08}
+    oldSize: {x: 0.86, y: 0.755}
     newSize: {x: 1.72, y: 1.51}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -138,26 +121,70 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.16, y: -0.53999996}
-      - {x: 0.42, y: -0.53999996}
-      - {x: 0.53, y: -0.47}
-      - {x: 0.63, y: -0.29}
-      - {x: 0.63, y: 0.07}
-      - {x: 0.57, y: 0.26}
-      - {x: 0.52, y: 0.38}
-      - {x: 0.47, y: 0.53999996}
-      - {x: 0.26999998, y: 0.53999996}
-      - {x: 0.14, y: 0.35}
-      - {x: -0.049999997, y: 0.45999998}
-      - {x: -0.16, y: 0.34}
-      - {x: -0.26999998, y: 0.53999996}
-      - {x: -0.44, y: 0.53999996}
-      - {x: -0.48, y: 0.5}
-      - {x: -0.57, y: 0.26999998}
-      - {x: -0.63, y: 0.06}
-      - {x: -0.63, y: -0.28}
-      - {x: -0.45999998, y: -0.53999996}
-      - {x: -0.17, y: -0.53999996}
-      - {x: -0.19, y: -0.31}
-      - {x: 0.11, y: -0.28}
-      - {x: 0.17999999, y: -0.42}
+    - - {x: -0.089999996, y: -0.2625}
+      - {x: -0.099999994, y: -0.1575}
+      - {x: 0.06, y: -0.1325}
+      - {x: 0.099999994, y: -0.1875}
+      - {x: 0.099999994, y: -0.2525}
+      - {x: 0.11, y: -0.2625}
+      - {x: 0.16499999, y: -0.2625}
+      - {x: 0.175, y: -0.2525}
+      - {x: 0.185, y: -0.2525}
+      - {x: 0.295, y: -0.3775}
+      - {x: 0.42499998, y: -0.3775}
+      - {x: 0.42999998, y: -0.3225}
+      - {x: 0.42999998, y: -0.1925}
+      - {x: 0.265, y: -0.0525}
+      - {x: 0.255, y: 0.022499999}
+      - {x: 0.32, y: 0.0875}
+      - {x: 0.315, y: 0.107499994}
+      - {x: 0.29, y: 0.16749999}
+      - {x: 0.325, y: 0.2625}
+      - {x: 0.345, y: 0.36249998}
+      - {x: 0.32, y: 0.3775}
+      - {x: 0.275, y: 0.3775}
+      - {x: 0.22999999, y: 0.3075}
+      - {x: 0.14999999, y: 0.30249998}
+      - {x: 0.12, y: 0.2725}
+      - {x: 0.12, y: 0.1625}
+      - {x: 0.06, y: 0.1375}
+      - {x: 0.049999997, y: 0.1725}
+      - {x: -0.065, y: 0.1575}
+      - {x: -0.12, y: 0.1575}
+      - {x: -0.114999995, y: 0.26749998}
+      - {x: -0.145, y: 0.3075}
+      - {x: -0.22999999, y: 0.30249998}
+      - {x: -0.25, y: 0.36749998}
+      - {x: -0.265, y: 0.3775}
+      - {x: -0.32999998, y: 0.3775}
+      - {x: -0.355, y: 0.3275}
+      - {x: -0.295, y: 0.1775}
+      - {x: -0.32, y: 0.0875}
+      - {x: -0.26, y: 0.0025}
+      - {x: -0.26999998, y: -0.0625}
+      - {x: -0.42999998, y: -0.19749999}
+      - {x: -0.42999998, y: -0.36749998}
+      - {x: -0.42, y: -0.3775}
+      - {x: -0.285, y: -0.3775}
+      - {x: -0.19, y: -0.24749999}
+      - {x: -0.19, y: -0.22749999}
+      - {x: -0.17, y: -0.26749998}
+--- !u!114 &-725227098599012058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356825648026846390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c5976d2804c94bf9a7e27d761e76b83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponPrefab: {fileID: 8620019425337953522, guid: cfee9dc8653c84c639de08b697a5cbeb,
+    type: 3}
+  destructionVfx: {fileID: 1981774452263784, guid: 69bc9de1566254e4db3ef4d734a7fbcd,
+    type: 3}
+  health: 200
+  minTimeTillNextFire: 0.5
+  maxTimeTillNextFire: 1
