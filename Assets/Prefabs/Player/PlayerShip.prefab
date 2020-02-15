@@ -98,7 +98,7 @@ MonoBehaviour:
   health: 300
   moveSpeed: 10
   fireAudio: {fileID: 8300000, guid: c373d310fd04742f8ad4811726100876, type: 3}
-  deathAudio: {fileID: 8300000, guid: 101108978589749afb40b3d845d1149a, type: 3}
+  deathAudio: {fileID: 8300000, guid: 10771fb6a5f1f4ba1b87e8cdfc0375f4, type: 3}
   bulletSpeed: 10
   mainWeaponPrefab: {fileID: 8620019425337953522, guid: 1e0145498111c4776a99e4ca93e9d024,
     type: 3}

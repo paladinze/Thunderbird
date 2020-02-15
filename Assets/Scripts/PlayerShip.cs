@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerShip : MonoBehaviour
 {
@@ -94,6 +95,7 @@ public class PlayerShip : MonoBehaviour
 
     private void Die()
     {
+        FindObjectOfType<Level>().LoadGameOver();
         Destroy(gameObject);
         Instantiate(destructionVfx, gameObject.transform.position, Quaternion.identity);
         AudioSource.PlayClipAtPoint(deathAudio, Camera.main.transform.position, 0.8f);
