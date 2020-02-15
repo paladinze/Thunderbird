@@ -10,6 +10,8 @@ public class Alien : MonoBehaviour
     [SerializeField] float health = 100; 
     [SerializeField] float minTimeTillNextFire = 1.0f;
     [SerializeField] float maxTimeTillNextFire = 3.0f;
+    [SerializeField] AudioClip deathAudio;
+    [SerializeField] AudioClip fireAudio;
 
     private float timeTillNextFire;
 
@@ -38,6 +40,7 @@ public class Alien : MonoBehaviour
       var bullet = Instantiate(weaponPrefab, transform.position, Quaternion.identity);
       var bulletVelocity = new Vector2(0f, -10f);
       bullet.GetComponent<Rigidbody2D>().velocity = bulletVelocity; 
+      AudioSource.PlayClipAtPoint(fireAudio, Camera.main.transform.position, 0.125f);
   }
 
   private void ResetFireTimer() {
@@ -56,8 +59,14 @@ public class Alien : MonoBehaviour
     damageDealer.Hit();
     if (health <= 0)
     {
-      var vfx = Instantiate(destructionVfx, gameObject.transform.position, Quaternion.identity);
-      Destroy(gameObject);
+      Die();
     }
+  }
+
+  private void Die()
+  {
+    var vfx = Instantiate(destructionVfx, gameObject.transform.position, Quaternion.identity);
+    AudioSource.PlayClipAtPoint(deathAudio, Camera.main.transform.position);
+    Destroy(gameObject);
   }
 }

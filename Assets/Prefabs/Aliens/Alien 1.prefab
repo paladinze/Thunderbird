@@ -115,6 +115,8 @@ MonoBehaviour:
   health: 100
   minTimeTillNextFire: 1
   maxTimeTillNextFire: 3
+  deathAudio: {fileID: 8300000, guid: 101108978589749afb40b3d845d1149a, type: 3}
+  fireAudio: {fileID: 8300000, guid: 3e8033adc4e3949548ac32625014e212, type: 3}
 --- !u!60 &2480828418309984733
 PolygonCollider2D:
   m_ObjectHideFlags: 0

@@ -97,10 +97,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 300
   moveSpeed: 10
+  fireAudio: {fileID: 8300000, guid: c373d310fd04742f8ad4811726100876, type: 3}
+  deathAudio: {fileID: 8300000, guid: 101108978589749afb40b3d845d1149a, type: 3}
   bulletSpeed: 10
   mainWeaponPrefab: {fileID: 8620019425337953522, guid: 1e0145498111c4776a99e4ca93e9d024,
     type: 3}
-  destructionVfx: {fileID: 3325203098098812030, guid: 3479d6c4d49154ad7a8b5e304a4a4f09,
+  destructionVfx: {fileID: 1587261729604890, guid: 600ec83cba1cec448bf41a6607229741,
     type: 3}
 --- !u!60 &-4235424439201096016
 PolygonCollider2D:

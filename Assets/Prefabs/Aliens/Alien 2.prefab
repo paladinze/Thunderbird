@@ -188,3 +188,5 @@ MonoBehaviour:
   health: 200
   minTimeTillNextFire: 0.5
   maxTimeTillNextFire: 1
+  deathAudio: {fileID: 8300000, guid: 101108978589749afb40b3d845d1149a, type: 3}
+  fireAudio: {fileID: 8300000, guid: 3ccb8ac7ffef34303afbb203a9796093, type: 3}

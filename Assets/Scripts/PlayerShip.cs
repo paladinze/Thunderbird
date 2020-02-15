@@ -10,6 +10,8 @@ public class PlayerShip : MonoBehaviour
     [SerializeField] float moveSpeed = 5.0f;
 
     [Header("Weapon")]
+    [SerializeField] AudioClip fireAudio;
+    [SerializeField] AudioClip deathAudio;
     [SerializeField] float bulletSpeed = 10f;
     [SerializeField] GameObject mainWeaponPrefab;
 
@@ -48,6 +50,7 @@ public class PlayerShip : MonoBehaviour
         GameObject bullet = Instantiate(
             mainWeaponPrefab, bulletPos, Quaternion.identity);
         bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0, bulletSpeed);
+        AudioSource.PlayClipAtPoint(fireAudio, Camera.main.transform.position, 0.1f);
     }
 
     private void setMoveBoundaries() {
@@ -83,9 +86,16 @@ public class PlayerShip : MonoBehaviour
     private void ProcessHit(DamageDealer damageDealer) {
         health -= damageDealer.GetDamage();
         damageDealer.Hit();
-        if (health < 0) {
-            Destroy(gameObject);
-            Instantiate(destructionVfx, gameObject.transform.position, Quaternion.identity);
+        if (health < 0)
+        {
+            Die();
         }
-    } 
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+        Instantiate(destructionVfx, gameObject.transform.position, Quaternion.identity);
+        AudioSource.PlayClipAtPoint(deathAudio, Camera.main.transform.position, 0.8f);
+    }
 }
