@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 4857240720085810305}
   - component: {fileID: 4122560727690028923}
   - component: {fileID: 2480828418309984733}
+  - component: {fileID: -2842951386159333555}
+  - component: {fileID: -6812372164004425009}
   m_Layer: 9
   m_Name: Alien 1
   m_TagString: Untagged
@@ -112,6 +114,7 @@ MonoBehaviour:
     type: 3}
   destructionVfx: {fileID: 1280240331523082, guid: 45ae5851ef2832044bba82850372d67b,
     type: 3}
+  hitVfx: {fileID: 1256001557233130, guid: 2dd0bdb7830e6644da169b32252dca96, type: 3}
   health: 100
   minTimeTillNextFire: 1
   maxTimeTillNextFire: 3
@@ -127,7 +130,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -163,3 +166,37 @@ PolygonCollider2D:
       - {x: -0.112, y: -0.47200003}
       - {x: -0.104, y: -0.080000006}
       - {x: -0.048, y: -0.296}
+--- !u!50 &-2842951386159333555
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764697187289962163}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &-6812372164004425009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764697187289962163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c21ba19b3ea54a44b89036d1dbb089c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100

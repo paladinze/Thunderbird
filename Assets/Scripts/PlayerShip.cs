@@ -85,8 +85,9 @@ public class PlayerShip : MonoBehaviour
     }
 
     private void ProcessHit(DamageDealer damageDealer) {
+        if (damageDealer == null) return;
         health -= damageDealer.GetDamage();
-        damageDealer.Hit();
+        damageDealer.Destroy();
         if (health < 0)
         {
             Die();

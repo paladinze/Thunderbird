@@ -7,6 +7,7 @@ public class Alien : MonoBehaviour
 {
     [SerializeField] GameObject weaponPrefab;
     [SerializeField] GameObject destructionVfx;
+    [SerializeField] GameObject hitVfx;
     [SerializeField] float health = 100; 
     [SerializeField] float minTimeTillNextFire = 1.0f;
     [SerializeField] float maxTimeTillNextFire = 3.0f;
@@ -50,22 +51,22 @@ public class Alien : MonoBehaviour
   private void OnTriggerEnter2D(Collider2D collision)
   {
     DamageDealer damageDealer = collision.gameObject.GetComponent<DamageDealer>();
-    ProcessHit(damageDealer);
-  }
-
-  private void ProcessHit(DamageDealer damageDealer)
-  {
+    if (damageDealer == null) return; 
     health -= damageDealer.GetDamage();
-    damageDealer.Hit();
+    if (!collision.gameObject.tag.Equals("player")) {
+      damageDealer.Destroy();
+    }
     if (health <= 0)
     {
       Die();
+    } else {
+      Instantiate(hitVfx, gameObject.transform.position, Quaternion.identity);
     }
   }
 
   private void Die()
   {
-    var vfx = Instantiate(destructionVfx, gameObject.transform.position, Quaternion.identity);
+    Instantiate(destructionVfx, gameObject.transform.position, Quaternion.identity);
     AudioSource.PlayClipAtPoint(deathAudio, Camera.main.transform.position);
     Destroy(gameObject);
   }

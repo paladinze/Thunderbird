@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4218195630672084300}
   - component: {fileID: 4218195630672084147}
   - component: {fileID: -4235424439201096016}
+  - component: {fileID: 8011064954292096901}
   m_Layer: 8
   m_Name: PlayerShip
-  m_TagString: Untagged
+  m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -193,3 +194,16 @@ PolygonCollider2D:
       - {x: -0.08533333, y: -0.5173333}
       - {x: -0.021333333, y: -0.53866667}
       - {x: 0.074666664, y: -0.528}
+--- !u!114 &8011064954292096901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4218195630672084303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c21ba19b3ea54a44b89036d1dbb089c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 200
