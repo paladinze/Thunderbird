@@ -18,6 +18,7 @@ public class PlayerShip : MonoBehaviour
 
     [Header("Destruction")]
     [SerializeField] GameObject destructionVfx;
+    [SerializeField] GameObject hitVfx;
 
     float bulletFiringStopPeriod = 0.1f;
     float minX;
@@ -88,6 +89,7 @@ public class PlayerShip : MonoBehaviour
         if (damageDealer == null) return;
         health -= damageDealer.GetDamage();
         damageDealer.Destroy();
+        Instantiate(hitVfx, gameObject.transform.position, Quaternion.identity);
         if (health < 0)
         {
             Die();

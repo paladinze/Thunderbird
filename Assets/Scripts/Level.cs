@@ -7,10 +7,12 @@ public class Level : MonoBehaviour
 {
     public void LoadMenu() {
         SceneManager.LoadScene(0);
+        FindObjectOfType<GameSession>().resetScore();
     }
 
     public void LoadGame() {
         SceneManager.LoadScene("Level 0");
+        FindObjectOfType<GameSession>().resetScore();
     }
 
     public void LoadGameOver() {

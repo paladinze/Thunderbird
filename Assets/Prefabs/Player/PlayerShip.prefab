@@ -105,6 +105,7 @@ MonoBehaviour:
     type: 3}
   destructionVfx: {fileID: 1587261729604890, guid: 600ec83cba1cec448bf41a6607229741,
     type: 3}
+  hitVfx: {fileID: 1981774452263784, guid: 4e19371f43812044389be8538ddac949, type: 3}
 --- !u!60 &-4235424439201096016
 PolygonCollider2D:
   m_ObjectHideFlags: 0

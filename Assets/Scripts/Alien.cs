@@ -9,6 +9,7 @@ public class Alien : MonoBehaviour
     [SerializeField] GameObject destructionVfx;
     [SerializeField] GameObject hitVfx;
     [SerializeField] float health = 100; 
+    [SerializeField] float score = 10;
     [SerializeField] float minTimeTillNextFire = 1.0f;
     [SerializeField] float maxTimeTillNextFire = 3.0f;
     [SerializeField] AudioClip deathAudio;
@@ -69,5 +70,6 @@ public class Alien : MonoBehaviour
     Instantiate(destructionVfx, gameObject.transform.position, Quaternion.identity);
     AudioSource.PlayClipAtPoint(deathAudio, Camera.main.transform.position);
     Destroy(gameObject);
+    FindObjectOfType<GameSession>().addScore(score);
   }
 }

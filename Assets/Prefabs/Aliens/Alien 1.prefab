@@ -116,6 +116,7 @@ MonoBehaviour:
     type: 3}
   hitVfx: {fileID: 1256001557233130, guid: 2dd0bdb7830e6644da169b32252dca96, type: 3}
   health: 100
+  score: 5
   minTimeTillNextFire: 1
   maxTimeTillNextFire: 3
   deathAudio: {fileID: 8300000, guid: 101108978589749afb40b3d845d1149a, type: 3}
