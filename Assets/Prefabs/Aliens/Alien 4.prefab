@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8115306388501177210}
   - component: {fileID: 7508181037567727824}
   m_Layer: 9
-  m_Name: Alien 3
+  m_Name: Alien 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 356825648026846390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,10 +75,10 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 572bbbf3cf1734a23ba9c9200c9cb01e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 39f0cd40c459641cf82a8c29463b07db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1.72, y: 1.51}
   m_AdaptiveModeThreshold: 0.5
@@ -110,15 +110,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c5976d2804c94bf9a7e27d761e76b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 8620019425337953522, guid: b9eb3fdca66b84e77be38336482a8c41,
+  weaponPrefab: {fileID: 8620019425337953522, guid: 835c62ed78f034e5da90c5cd6c1a227d,
     type: 3}
   destructionVfx: {fileID: 1981774452263784, guid: 4e19371f43812044389be8538ddac949,
     type: 3}
   hitVfx: {fileID: 1256001557233130, guid: 2dd0bdb7830e6644da169b32252dca96, type: 3}
   health: 300
-  score: 25
-  minTimeTillNextFire: 0.3
-  maxTimeTillNextFire: 1
+  score: 35
+  minTimeTillNextFire: 2
+  maxTimeTillNextFire: 5
   deathAudio: {fileID: 8300000, guid: 101108978589749afb40b3d845d1149a, type: 3}
   fireAudio: {fileID: 8300000, guid: 3cd0453769da54d6e9945394a1fd8f4e, type: 3}
 --- !u!60 &-51842433164497597
@@ -138,7 +138,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.26, y: 1.08}
+    oldSize: {x: 1.22, y: 3.74}
     newSize: {x: 1.72, y: 1.51}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
