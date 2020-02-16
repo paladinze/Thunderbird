@@ -6,6 +6,7 @@ using UnityEngine;
 public class Alien : MonoBehaviour
 {
     [SerializeField] GameObject weaponPrefab;
+    [SerializeField] bool weaponAutoAim = false;
     [SerializeField] GameObject destructionVfx;
     [SerializeField] GameObject hitVfx;
     [SerializeField] float health = 100; 
@@ -40,7 +41,12 @@ public class Alien : MonoBehaviour
 
   private void Fire() {
       var bullet = Instantiate(weaponPrefab, transform.position, Quaternion.identity);
+      var player = FindObjectOfType<PlayerShip>();
       var bulletVelocity = new Vector2(0f, -10f);
+      if (weaponAutoAim && player != null) {
+        var alienToPlayerVector = player.transform.position - transform.position;
+        bulletVelocity = alienToPlayerVector;
+      }
       bullet.GetComponent<Rigidbody2D>().velocity = bulletVelocity; 
       AudioSource.PlayClipAtPoint(fireAudio, Camera.main.transform.position, 0.125f);
   }

@@ -112,6 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponPrefab: {fileID: 8620019425337953522, guid: b9eb3fdca66b84e77be38336482a8c41,
     type: 3}
+  weaponAutoAim: 1
   destructionVfx: {fileID: 1981774452263784, guid: 4e19371f43812044389be8538ddac949,
     type: 3}
   hitVfx: {fileID: 1256001557233130, guid: 2dd0bdb7830e6644da169b32252dca96, type: 3}

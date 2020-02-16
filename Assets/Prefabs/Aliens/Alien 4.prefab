@@ -112,10 +112,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponPrefab: {fileID: 8620019425337953522, guid: 835c62ed78f034e5da90c5cd6c1a227d,
     type: 3}
+  weaponAutoAim: 0
   destructionVfx: {fileID: 1981774452263784, guid: 4e19371f43812044389be8538ddac949,
     type: 3}
   hitVfx: {fileID: 1256001557233130, guid: 2dd0bdb7830e6644da169b32252dca96, type: 3}
-  health: 300
+  health: 1000
   score: 35
   minTimeTillNextFire: 2
   maxTimeTillNextFire: 5
