@@ -1,6 +1,6 @@
 # Thunderbird
-A 2D space shooter game based on Unity :)
-(unity version: 2019.3.0f6)
+- A 2D space shooter game based on Unity :)
+- unity version: 2019.3.0f6
 
 ## key features
 - fast paced space shooter
