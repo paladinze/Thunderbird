@@ -2,6 +2,9 @@
 - A 2D space shooter game based on Unity :)
 - unity version: 2019.3.0f6
 
+![demo gif](https://github.com/paladinze/Thunderbird/raw/master/demo.gif)
+
+
 ## key features
 - fast paced space shooter
 - configurable waves and waypoints
